@@ -45,4 +45,4 @@ for seq in txt:
         pass
     digits.append(int(first+last))
 
-print(f"The answer to part one is {sum(digits)}")
+print(f"The answer to part two is {sum(digits)}")
