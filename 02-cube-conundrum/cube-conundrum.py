@@ -57,3 +57,25 @@ for id, games in gamedict.items():
                 pass
 
 print(f"The answer to part one is {sum(possible_games)}")
+# part 2
+# get the minimum number of coloured squares in each game
+powers = []
+for id, games in gamedict.items():
+    min_red = []
+    min_green = []
+    min_blue = []
+    for game in games:
+        n_reds = convert_match_to_int(red_pat.search(game))
+        n_greens = convert_match_to_int(green_pat.search(game))
+        n_blues = convert_match_to_int(blue_pat.search(game))
+        min_red.append(n_reds)
+        min_green.append(n_greens)
+        min_blue.append(n_blues)
+    
+    n_red = max(min_red)
+    n_green = max(min_green)
+    n_blue = max(min_blue)
+    powers.append(n_red*n_green*n_blue)
+
+print(f"The answer to part two is {sum(powers)}")
+    
