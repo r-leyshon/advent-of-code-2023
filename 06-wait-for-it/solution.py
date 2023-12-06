@@ -33,3 +33,7 @@ def get_win_options(times:list, distances:list) -> list:
 n_wins = get_win_options(times=times, distances=distances)
 print(f"The answer to part one is {prod(n_wins)}")
 # part 2 - collapse the poorly kerned(!) races
+new_time = int(txt[0].replace(" ", "").split(":")[-1])
+new_distance = int(txt[-1].replace(" ", "").split(":")[-1])
+n_wins = get_win_options([new_time], [new_distance])
+print(f"The answer to part two is {n_wins[0]}")
