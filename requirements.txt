@@ -1,2 +1,3 @@
 pyprojroot
 numpy
+pandas
